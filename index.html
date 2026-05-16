@@ -146,6 +146,81 @@ body::before {
   background: var(--gold-dim);
 }
 
+/* ── DINNER MENU ── */
+.menu-section {
+  border-top: 1px solid rgba(201,168,76,0.15);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  background: linear-gradient(180deg, rgba(201,168,76,0.04) 0%, transparent 100%);
+  padding: 32px 24px 36px;
+}
+
+.menu-inner {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu-main {
+  margin-bottom: 24px;
+}
+
+.menu-course-label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 8px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 8px;
+}
+
+.menu-main-name {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(18px, 5vw, 24px);
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing: 0.03em;
+  margin-bottom: 6px;
+}
+
+.menu-main-detail {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--gold-dim);
+  letter-spacing: 0.05em;
+}
+
+.menu-divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
+  margin: 20px auto;
+}
+
+.menu-sides {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.menu-sides li {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-dim);
+  line-height: 1.6;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+}
+
+.menu-sides li:last-child { border-bottom: none; }
+
+.menu-sides li::before { display: none; }
+
+/* Fix counter */
+.menu-sides { counter-reset: item; }
+
 /* ── PAIRINGS GRID ── */
 .pairings-section {
   padding: 20px 16px 48px;
@@ -443,6 +518,31 @@ body::before {
   <p>This evening pairs six exceptional whiskeys with six carefully selected cigars, each chosen to complement, contrast, or deepen the character of its spirit companion.</p>
   <p>Your cigar caddie holds the full lineup. Smoke at your own pace — most guests enjoy one to three cigars across the evening. Each pairing below tells the full story.</p>
   <span class="intro-instruction">Tap a pairing to explore</span>
+</section>
+
+<!-- Dinner Menu -->
+<section class="menu-section">
+  <div class="menu-inner">
+    <div class="section-label">The Dinner</div>
+
+    <div class="menu-main">
+      <div class="menu-course-label">Main Course</div>
+      <div class="menu-main-name">20 oz Porterhouse Steak</div>
+      <div class="menu-main-detail">Marinated 24 Hours, Finished with a Garlic Rub</div>
+    </div>
+
+    <div class="menu-divider"></div>
+
+    <div class="menu-course-label">Buffet Sides</div>
+    <ol class="menu-sides">
+      <li>Tomato Cucumber Salad</li>
+      <li>Savoy Salad with Grilled Asparagus, Radish, Cucumber &amp; Carrots</li>
+      <li>Lobster Mac &amp; Cheese in a Gruyère Cheese Sauce</li>
+      <li>Parmesan Risotto</li>
+      <li>Duchess Potatoes</li>
+      <li>Brioche Potato Rolls</li>
+    </ol>
+  </div>
 </section>
 
 <main class="pairings-section">
